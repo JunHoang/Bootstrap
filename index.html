@@ -48,7 +48,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="loginButton">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -107,7 +107,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" id="reservationButton">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -360,6 +360,20 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');
                 }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#reservationButton").click(function() {
+                $("#reservationModal").modal('hide');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#loginButton").click(function(){
+                $("#loginModal").modal('hide');
             });
         });
     </script>
